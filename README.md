@@ -4,7 +4,7 @@
 
 현재 emart24 회사에서 근무하고 있으며, 7년간 유통산업(CVS)에 대한 이해를 기반으로 여러 분석 및 프로젝트를 진행하였습니다
 
-사용하고 있는 분석툴은 Python / Qgis / Power BI을 사용하고 있고 SQL은 배우고 있으나 업무에 잘 사용하지 않고 있습니다  
+사용하고 있는 분석툴은 Python / Qgis / Power BI을 사용하고 있고 SQL은 배웠으나 업무에 잘 사용하지 않고 있습니다
 * Excel, Power Point 사용 능력 (basic)
 
 
