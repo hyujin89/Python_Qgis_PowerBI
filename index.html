@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HyunJin Universe</title>
+    <link rel="stylesheet" href="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/easygpt/default.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            margin-top: 0.5cm;
+        }
+
+        .hero {
+            margin-bottom: 1cm;
+        }
+
+        h2,
+        h3 {
+            margin-bottom: 0.5cm;
+        }
+
+        h3 {
+            font-size: 18px; /* 수정된 크기 */
+        }
+
+        /* 수정된 스타일 */
+        .visitor-count-container {
+            text-align: center;
+            font-size: 18px;
+            border: 2px solid #808080; /* 테두리 색상은 회색으로 변경 */
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0 auto; /* 가운데 정렬 */
+            max-width: 600px; /* 최대 너비 */
+        }
+
+        /* 추가된 스타일 */
+              /* 수정된 스타일 */
+              .moving-animation {
+            position: fixed;
+            top: 120px; /* 오른쪽 맨 위로 이동 */
+            right: 210px; /* 오른쪽 맨 위로 이동 */
+            animation: moveUpDown 2s infinite alternate; /* 애니메이션 속성은 필요에 따라 조절하세요 */
+        }
+        /* 추가된 스타일 */
+        #remainingTime {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 18px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .moving-animation img {
+            width: 50px; /* 원하는 크기로 조절 */
+            height: 50px; /* 원하는 크기로 조절 */
+        }
+
+        @keyframes moveUpDown {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-100px); /* 필요에 따라 수직 이동 거리를 조절하세요 */
+            }
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            let visitorCount = localStorage.getItem('visitorCount');
+            if (!visitorCount) {
+                visitorCount = 0;
+            }
+            visitorCount++;
+            localStorage.setItem('visitorCount', visitorCount);
+            document.getElementById('visitorCount').innerText = visitorCount;
+            
+            // 2024-04-24 날짜와 현재 날짜 간의 차이 계산
+            const targetDate = new Date('2024-04-24T00:00:00');
+            const currentDate = new Date();
+            const timeDifference = targetDate - currentDate;
+            
+            // 초 단위로 계산하여 출력
+            const remainingSeconds = Math.floor(timeDifference / 1000);
+            document.getElementById('remainingTime').innerText = formatTime(remainingSeconds);
+
+            // 1초마다 갱신
+            setInterval(updateTime, 1000);
+        };
+
+        function updateTime() {
+            // 2024-04-24 날짜와 현재 날짜 간의 차이 계산
+            const targetDate = new Date('2024-04-24T00:00:00');
+            const currentDate = new Date();
+            const timeDifference = targetDate - currentDate;
+            
+            // 초 단위로 계산하여 출력
+            const remainingSeconds = Math.floor(timeDifference / 1000);
+            document.getElementById('remainingTime').innerText = formatTime(remainingSeconds);
+        }
+
+        function formatTime(seconds) {
+            const days = Math.floor(seconds / (24 * 60 * 60));
+            const hours = Math.floor((seconds % (24 * 60 * 60)) / (60 * 60));
+            const minutes = Math.floor((seconds % (60 * 60)) / 60);
+            const remainingSeconds = seconds % 60;
+
+            return `${days}일 ${hours}시간 ${minutes}분 ${remainingSeconds}초`;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="moving-animation">
+        <img src="B.png" alt="움직이는 애니메이션">
+    </div>
+
+
+    <div class="hero bg-dark text-center py-5">
+        <h1 class="text-white">HyunJin Universe</h1>
+        <h2 class="text-white">Since 1989.02.15</h2>
+        <h3 class="text-white">(미래를 준비하자, 변하지 않을 것에 대한 집중)</h3>
+        <button class="blue-button">그림을 클릭해주세요</button>
+    </div>
+
+    <div class="container">
+         
+        <p class="visitor-count-container">총 방문자 수 : <span id="visitorCount">0</span></p>
+                <!-- 남은 시간을 표시할 요소 추가 -->
+        <p id="remainingTime"></p>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="experience.png" class="card-img-top" alt="석현진">
+                    <div class="card-body">
+                        <h5 class="card-title">Experience(Github)
+                        </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">(Changing industry Order)</h6>
+                        <p class="card-text">Share my experience</p>
+                        <a href="https://github.com/hyujin89/hyunjin89"
+                            class="card-link stretched-link" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Tree.png" class="card-img-top" alt="석현진">
+                    <div class="card-body">
+                        <h5 class="card-title">Value</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">(Career Tree)</h6>
+                        <p class="card-text">My value realization process</p>
+                        <a href="value.PNG" class="card-link stretched-link" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="me.png" class="card-img-top" alt="석현진">
+                    <div class="card-body">
+                        <h5 class="card-title">최근 재밌는 코드</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">(LangChain)</h6>
+                        <p class="card-text">Hang in there, I'll show you</p>
+                        <a href="ss.png" class="card-link stretched-link" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Hub</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <style>
+        * {
+            font-family: "Pretendard", serif;
+        }
+
+        body {
+            background-color: #f0f2f4;
+            margin: 0;
+        }
+
+        .header {
+            background-color: #232f3e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* 카테고리 사이의 간격 설정 */
+        }
+
+        .news-category {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(50% - 10px); /* 조절 가능한 값 */
+            margin-bottom: 20px;
+        }
+
+        .category-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .flag {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .news-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .news-item {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .blue-button {
+        background-color: #808080; /* 회색 */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+        .blue-button:hover {
+            background-color: #555555; /* Darker gray on hover */
+        }
+            </style>
+        </head>
+    <body>
+    <div class="header">
+        <h1>News Hub / AI Website</h1>
+    </div>
+    <div class="container">
+    <div class="news-category">
+        <h2 class="category-title"><img class="flag" src="us.png" alt="USA Flag" />미국 News</h2>
+        <ul class="news-list">
+            <li class="news-item"><a href="https://www.cnn.com/">CNN</a></li>
+            <li class="news-item"><a href="https://www.nytimes.com/">The New York Times</a></li>
+                <!-- 다른 미국 뉴스 사이트 추가 -->
+            </ul>
+        </div>
+    <!-- 한국 뉴스 버튼 -->
+    <div class="news-category">
+        <h2 class="category-title"><img class="flag" src="korea.png" alt="Korea Flag" />한국 News</h2>
+        <ul class="news-list">
+            <li class="news-item"><a href="https://en.yna.co.kr/">Yonhap News Agency</a></li>
+            <li class="news-item"><a href="http://koreajoongangdaily.joins.com/">Korea JoongAng Daily</a></li>
+            <!-- 다른 한국 뉴스 사이트 추가 -->
+        </ul>
+    </div>
+    <!-- 중국 뉴스 버튼 -->
+    <div class="news-category" style="width: calc(50% - 10px); padding: 10px;"> <!-- 크기와 패딩 수정 -->
+        <h2 class="category-title" style="font-size: 24px;"></h2>
+        <h2 class="category-title"><img class="flag" src="china.png" alt="China Flag" />중국 News</h2>
+        <ul class="news-list">
+            <li class="news-item"><a href="http://www.xinhuanet.com/english/">Xinhua News Agency</a></li>
+            <li class="news-item"><a href="http://www.chinadaily.com.cn/">China Daily</a></li>
+            <!-- 다른 중국 뉴스 사이트 추가 -->
+        </ul>
+    </div>
+    <div class="news-category" style="width: calc(50% - 10px); padding: 10px;"> <!-- 크기와 패딩 수정 -->
+        <h2 class="category-title" style="font-size: 24px;"></h2>
+        <h2 class="category-title"><img class="flag" src="japan.png" alt="japan Flag" />일본 News</h2>
+        <ul class="news-list">
+            <li class="news-item"><a href="https://www3.nhk.or.jp/nhkworld/en/news/">NHK World</a></li>
+            <li class="news-item"><a href="http://www.asahi.com/ajw/">Asahi Shimbun</a></li>
+            <!-- 다른 일본 뉴스 사이트 추가 -->
+
+</ul>
+</div>
+
+
+    <div class="news-category" style="width: calc(50% - 10px); padding: 10px;">
+        <h2 class="category-title"></h2>
+        <div style="display: flex; align-items: center;">
+            <h2 class="category-title" style="color: navy; margin-right: 20px;"><img class="flag"
+                    />DeepL</h2>
+            <a href="https://deepl.com" class="blue-button" target="_blank">바로 가기</a>
+        </div>
+    </div>
+
+    <div class="news-category" style="width: calc(50% - 10px); padding: 10px;">
+        <h2 class="category-title"></h2>
+        <div style="display: flex; align-items: center;">
+            <h2 class="category-title" style="color: navy; margin-right: 20px;"><img class="flag"
+                    />Dream AI</h2>
+            <a href="https://dream.ai" class="blue-button" target="_blank">바로 가기</a>
+        </div>
+    </div>
+
+    <div class="news-category" style="width: calc(50% - 10px); padding: 10px;">
+        <h2 class="category-title"></h2>
+        <div style="display: flex; align-items: center;">
+            <h2 class="category-title" style="color: navy; margin-right: 20px;"><img class="flag"
+                    />Graphy App</h2>
+            <a href="https://graphy.app" class="blue-button" target="_blank">바로 가기</a>
+        </div>
+    </div>
+
+    <div class="news-category" style="width: calc(50% - 10px); padding: 10px;">
+        <h2 class="category-title"></h2>
+        <div style="display: flex; align-items: center;">
+            <h2 class="category-title" style="color: navy; margin-right: 20px;"><img class="flag"
+                    />Gamma App</h2>
+            <a href="https://gamma.app" class="blue-button" target="_blank">바로 가기</a>
+        </div>
+    </div>
+
+    <div class="news-category" style="width: calc(50% - 10px); padding: 10px;">
+        <h2 class="category-title"></h2>
+        <div style="display: flex; align-items: center;">
+            <h2 class="category-title" style="color: navy; margin-right: 20px;"><img class="flag"
+                    />Bing Create</h2>
+            <a href="https://www.bing.com/create" class="blue-button" target="_blank">바로 가기</a>
+        </div>
+    </div>
+
+    <div class="news-category" style="width: calc(50% - 10px); padding: 10px;">
+        <h2 class="category-title"></h2>
+        <div style="display: flex; align-items: center;">
+            <h2 class="category-title" style="color: navy; margin-right: 20px;"><img class="flag"
+                   />Chat GPT</h2>
+            <a href="https://chat.openai.com" class="blue-button" target="_blank">바로 가기</a>
+        </div>
+    </div>
+    </div>
+
+
+    </ul>
+    </div>
+    
+    </body>
+    </html>
