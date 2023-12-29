@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c0a6de312f8b4b31a962b80ede85d816 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_c0a6de312f8b4b31a962b80ede85d816" ></div>
+        
+</body>
+<script>    
+    
+            var map_c0a6de312f8b4b31a962b80ede85d816 = L.map(
+                "map_c0a6de312f8b4b31a962b80ede85d816",
+                {
+                    center: [37.1991743092707, 127.114278180857],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3a11b5e1cf5c7c3973562a241083f9a8 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c0a6de312f8b4b31a962b80ede85d816);
+        
+    
+            var marker_99aa07805781edfe5e8b1849aa34ffd3 = L.marker(
+                [37.1991743092707, 127.114278180857],
+                {}
+            ).addTo(map_c0a6de312f8b4b31a962b80ede85d816);
+        
+    
+            var icon_239acb43d1ffd36c0396f43397367f66 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_99aa07805781edfe5e8b1849aa34ffd3.setIcon(icon_239acb43d1ffd36c0396f43397367f66);
+        
+    
+        var popup_e99c765ed3d5855861c6f27b9468135b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a9c81ad7117a93fcb4cc3613a148b550 = $(`<div id="html_a9c81ad7117a93fcb4cc3613a148b550" style="width: 100.0%; height: 100.0%;">출발지: 동탄카림점</div>`)[0];
+            popup_e99c765ed3d5855861c6f27b9468135b.setContent(html_a9c81ad7117a93fcb4cc3613a148b550);
+        
+
+        marker_99aa07805781edfe5e8b1849aa34ffd3.bindPopup(popup_e99c765ed3d5855861c6f27b9468135b)
+        ;
+
+        
+    
+    
+            var poly_line_935a3a7b90c6b97c299a73ac4027cfba = L.polyline(
+                [[37.1991743092707, 127.114278180857], [37.5073379627772, 126.962312475654]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c0a6de312f8b4b31a962b80ede85d816);
+        
+    
+            var marker_af441e58605f44afbe6da173b5a3689e = L.marker(
+                [37.5073379627772, 126.962312475654],
+                {}
+            ).addTo(map_c0a6de312f8b4b31a962b80ede85d816);
+        
+    
+            var icon_3af8ee535e3adc6e5f51fe48fbb73c63 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_af441e58605f44afbe6da173b5a3689e.setIcon(icon_3af8ee535e3adc6e5f51fe48fbb73c63);
+        
+    
+        var popup_27f1ed4df55237d1034d03fcb21c9f47 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4e421524b549bcddc53ee35d074e6b1 = $(`<div id="html_c4e421524b549bcddc53ee35d074e6b1" style="width: 100.0%; height: 100.0%;">도착지: 흑석동점 거리: 36.76 km 시간: 0.61 시간</div>`)[0];
+            popup_27f1ed4df55237d1034d03fcb21c9f47.setContent(html_c4e421524b549bcddc53ee35d074e6b1);
+        
+
+        marker_af441e58605f44afbe6da173b5a3689e.bindPopup(popup_27f1ed4df55237d1034d03fcb21c9f47)
+        ;
+
+        
+    
+    
+            var poly_line_4befab3c44886545cf1d375b52250f10 = L.polyline(
+                [[37.1991743092707, 127.114278180857], [37.4856869986451, 127.020747985774]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c0a6de312f8b4b31a962b80ede85d816);
+        
+    
+            var marker_cd09cb2306de09bdef7369c4965f26ce = L.marker(
+                [37.4856869986451, 127.020747985774],
+                {}
+            ).addTo(map_c0a6de312f8b4b31a962b80ede85d816);
+        
+    
+            var icon_5a3743ad955edc61b5a0bb61900a3571 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cd09cb2306de09bdef7369c4965f26ce.setIcon(icon_5a3743ad955edc61b5a0bb61900a3571);
+        
+    
+        var popup_34cc46fface5144d799a0fc80e39314d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ec256058a8d0f66c4179cb04a9cb39e0 = $(`<div id="html_ec256058a8d0f66c4179cb04a9cb39e0" style="width: 100.0%; height: 100.0%;">도착지: 남부터미널점 거리: 32.86 km 시간: 0.55 시간</div>`)[0];
+            popup_34cc46fface5144d799a0fc80e39314d.setContent(html_ec256058a8d0f66c4179cb04a9cb39e0);
+        
+
+        marker_cd09cb2306de09bdef7369c4965f26ce.bindPopup(popup_34cc46fface5144d799a0fc80e39314d)
+        ;
+
+        
+    
+    
+            var poly_line_5897dd46713cc9e7bfdf7e624fb59058 = L.polyline(
+                [[37.1991743092707, 127.114278180857], [37.3718742492189, 127.106277383007]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c0a6de312f8b4b31a962b80ede85d816);
+        
+    
+            var marker_c32829c756ce96471bf41385d7ee579c = L.marker(
+                [37.3718742492189, 127.106277383007],
+                {}
+            ).addTo(map_c0a6de312f8b4b31a962b80ede85d816);
+        
+    
+            var icon_e75e8f95f5fb54db9a3b05fdcaf6d20f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c32829c756ce96471bf41385d7ee579c.setIcon(icon_e75e8f95f5fb54db9a3b05fdcaf6d20f);
+        
+    
+        var popup_2d0ea1131728875ca4aeca7c26f54e5f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e87acf3cc66979a538bb1f7e48d7af7 = $(`<div id="html_8e87acf3cc66979a538bb1f7e48d7af7" style="width: 100.0%; height: 100.0%;">도착지: 분당정자점 거리: 19.18 km 시간: 0.32 시간</div>`)[0];
+            popup_2d0ea1131728875ca4aeca7c26f54e5f.setContent(html_8e87acf3cc66979a538bb1f7e48d7af7);
+        
+
+        marker_c32829c756ce96471bf41385d7ee579c.bindPopup(popup_2d0ea1131728875ca4aeca7c26f54e5f)
+        ;
+
+        
+    
+    
+            var poly_line_c5212828fbef10a073aafe2704c12c13 = L.polyline(
+                [[37.1991743092707, 127.114278180857], [37.3902794791054, 127.090208110199]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c0a6de312f8b4b31a962b80ede85d816);
+        
+    
+            var marker_571e5986bf07efef88ae56f6962f9320 = L.marker(
+                [37.3902794791054, 127.090208110199],
+                {}
+            ).addTo(map_c0a6de312f8b4b31a962b80ede85d816);
+        
+    
+            var icon_5827f4d788ebba56ff90a65c4a7c22ae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_571e5986bf07efef88ae56f6962f9320.setIcon(icon_5827f4d788ebba56ff90a65c4a7c22ae);
+        
+    
+        var popup_1eab0f95987e73fd0d1ef3855e54614c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1fcf2b16b8c2abab4575d195398aec3f = $(`<div id="html_1fcf2b16b8c2abab4575d195398aec3f" style="width: 100.0%; height: 100.0%;">도착지: 서판교점 거리: 21.32 km 시간: 0.36 시간</div>`)[0];
+            popup_1eab0f95987e73fd0d1ef3855e54614c.setContent(html_1fcf2b16b8c2abab4575d195398aec3f);
+        
+
+        marker_571e5986bf07efef88ae56f6962f9320.bindPopup(popup_1eab0f95987e73fd0d1ef3855e54614c)
+        ;
+
+        
+    
+    
+            var poly_line_ac5c00f9d5bb577ba1fe5303c9eac1e0 = L.polyline(
+                [[37.1991743092707, 127.114278180857], [37.6281574098718, 127.040214854523]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c0a6de312f8b4b31a962b80ede85d816);
+        
+    
+            var marker_a589227961086ee313cd4a1be9ca8e51 = L.marker(
+                [37.6281574098718, 127.040214854523],
+                {}
+            ).addTo(map_c0a6de312f8b4b31a962b80ede85d816);
+        
+    
+            var icon_145c9d38fe5376b2d11160a83a63fa31 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a589227961086ee313cd4a1be9ca8e51.setIcon(icon_145c9d38fe5376b2d11160a83a63fa31);
+        
+    
+        var popup_7b80c74ef5eb208ab99ec1b91e73a033 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_774f9e32bf58f9bee8d0f5292a0becf3 = $(`<div id="html_774f9e32bf58f9bee8d0f5292a0becf3" style="width: 100.0%; height: 100.0%;">도착지: 번동점 거리: 48.06 km 시간: 0.80 시간</div>`)[0];
+            popup_7b80c74ef5eb208ab99ec1b91e73a033.setContent(html_774f9e32bf58f9bee8d0f5292a0becf3);
+        
+
+        marker_a589227961086ee313cd4a1be9ca8e51.bindPopup(popup_7b80c74ef5eb208ab99ec1b91e73a033)
+        ;
+
+        
+    
+    
+            var poly_line_0cdc36e71a58a25f2e258829f4cfba85 = L.polyline(
+                [[37.1991743092707, 127.114278180857], [37.3509809524942, 126.945175033254]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c0a6de312f8b4b31a962b80ede85d816);
+        
+    
+            var marker_62974edb81f7f2a455b32022152f9ed5 = L.marker(
+                [37.3509809524942, 126.945175033254],
+                {}
+            ).addTo(map_c0a6de312f8b4b31a962b80ede85d816);
+        
+    
+            var icon_77e7e1fb9210f45ee996f8424ed24451 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_62974edb81f7f2a455b32022152f9ed5.setIcon(icon_77e7e1fb9210f45ee996f8424ed24451);
+        
+    
+        var popup_eb9ab0090fe77448a2d794807abfb90c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_134062bc9ebe4ae321b99dfd4fae0f38 = $(`<div id="html_134062bc9ebe4ae321b99dfd4fae0f38" style="width: 100.0%; height: 100.0%;">도착지: 당동점 거리: 22.56 km 시간: 0.38 시간</div>`)[0];
+            popup_eb9ab0090fe77448a2d794807abfb90c.setContent(html_134062bc9ebe4ae321b99dfd4fae0f38);
+        
+
+        marker_62974edb81f7f2a455b32022152f9ed5.bindPopup(popup_eb9ab0090fe77448a2d794807abfb90c)
+        ;
+
+        
+    
+</script>
